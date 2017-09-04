@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var loginView: UIImageView!
+    @IBOutlet var pageControll: UIPageControl!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loginView.image = UIImage(named: "login_view0.png")
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func changeView(_ sender: Any) {
+        loginView.image = UIImage(named: "login_view" + "\((sender as AnyObject).currentPage)" + ".png")
+        // デバック
+        print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
+    }
+    
 }
 
