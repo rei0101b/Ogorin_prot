@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -23,11 +25,31 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていないときの処理
+            DispatchQueue.main.async {
+                let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                self.present(loginViewController!, animated: true, completion: nil)
+            }
+        }
+    }
+    
     @IBAction func changeView(_ sender: Any) {
         loginView.image = UIImage(named: "login_view" + "\((sender as AnyObject).currentPage)" + ".png")
         // デバック
         print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
     }
+    @IBAction func handleLogoutButton(_ sender: Any) {
+        // ログアウトする
+        try! Auth.auth().signOut()
+        // ログイン画面を表示する
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+        self.present(loginViewController!, animated: true, completion: nil)
+    }
 }
+
 

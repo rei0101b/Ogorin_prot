@@ -24,11 +24,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_view0" translatesAutoresizingMaskIntoConstraints="NO" id="L3H-Ys-Xmd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-18-AD1">
-                                <rect key="frame" x="15" y="541" width="347" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="btn_facebook_login"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV7-7I-xpY">
                                 <rect key="frame" x="78" y="605" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -36,6 +31,9 @@
                                 <state key="normal" title="企業様の登録はこちら">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THD-9E-Mfp"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="O96-AP-Qab">
                                 <rect key="frame" x="0.0" y="496" width="375" height="37"/>
@@ -44,6 +42,14 @@
                                     <action selector="changeView:" destination="BYZ-38-t0r" eventType="valueChanged" id="qOV-k3-7wk"/>
                                 </connections>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-18-AD1">
+                                <rect key="frame" x="51" y="541" width="272" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="btn_start"/>
+                                <connections>
+                                    <action selector="fbSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLC-Sf-py1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -62,23 +68,71 @@
             </objects>
             <point key="canvasLocation" x="181.59999999999999" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="GwR-kc-6t2">
             <objects>
-                <viewController id="Xd1-Aa-PFz" customClass="ViewController" customModule="Ogorin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="Xd1-Aa-PFz" customClass="loginViewController" customModule="Ogorin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R5e-mS-wxT"/>
                         <viewControllerLayoutGuide type="bottom" id="MYv-hU-FjE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pF0-Se-q5C">
+                    <view key="view" contentMode="scaleToFill" id="pF0-Se-q5C" customClass="Login">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login_create_view" translatesAutoresizingMaskIntoConstraints="NO" id="0Hj-SS-kf5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlY-xS-JCe">
+                                <rect key="frame" x="22" y="161" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTp-0g-NqT">
+                                <rect key="frame" x="22" y="211" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アカウント作成時は表示名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X19-qk-Za3">
+                                <rect key="frame" x="22" y="264" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-UO-z7i">
+                                <rect key="frame" x="49" y="320" width="271" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_login"/>
+                                <connections>
+                                    <action selector="handleLoginButton:" destination="Xd1-Aa-PFz" eventType="touchUpInside" id="pmw-0u-rAM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwF-1k-qk1">
+                                <rect key="frame" x="57" y="391" width="261" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btn_create_accont"/>
+                                <connections>
+                                    <action selector="handleCreateAcountButton:" destination="Xd1-Aa-PFz" eventType="touchUpInside" id="B0i-ZL-yxJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="X19-qk-Za3" id="dzV-qj-pv0"/>
+                        <outlet property="mailAddressTextField" destination="ZlY-xS-JCe" id="O1F-Fk-jap"/>
+                        <outlet property="passwordTextField" destination="MTp-0g-NqT" id="EH7-4y-OF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVz-Zi-zPo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="139"/>
+            <point key="canvasLocation" x="869.60000000000002" y="138.98050974512745"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mn1-kG-B44">
@@ -100,7 +154,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_facebook_login" width="347" height="56"/>
+        <image name="btn_create_accont" width="268" height="57"/>
+        <image name="btn_login" width="268" height="57"/>
+        <image name="btn_start" width="268" height="57"/>
+        <image name="login_create_view" width="375" height="667"/>
         <image name="login_view0" width="375" height="667"/>
     </resources>
 </document>
