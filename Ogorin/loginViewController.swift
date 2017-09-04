@@ -51,8 +51,10 @@ class loginViewController: UIViewController, UITextFieldDelegate {
                     print("DEBUG_PRINT: ログインに成功しました。")
                     // HUDを消す
                     SVProgressHUD.dismiss()
-                    // 画面を閉じてViewControllerに戻る
-                    self.dismiss(animated: true, completion: nil)
+                    // メイン画面への遷移
+                    let storyboard: UIStoryboard = self.storyboard!
+                    let nextView = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+                    self.present(nextView, animated: true, completion: nil)
                 }
             }
         }
@@ -95,9 +97,10 @@ class loginViewController: UIViewController, UITextFieldDelegate {
                         
                         // HUDを消す
                         SVProgressHUD.dismiss()
-                        
-                        // 画面を閉じてViewControllerに戻る
-                        self.dismiss(animated: true, completion: nil)
+                        // メイン画面への遷移
+                        let storyboard: UIStoryboard = self.storyboard!
+                        let nextView = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+                        self.present(nextView, animated: true, completion: nil)
                     }
                 } else {
                     print("DEBUG_PRINT: displayNameの設定に失敗しました。")
