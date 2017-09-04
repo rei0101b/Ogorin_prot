@@ -29,6 +29,5 @@ class ViewController: UIViewController {
         // デバック
         print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
     }
-    
 }
 
