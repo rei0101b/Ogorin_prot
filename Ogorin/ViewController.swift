@@ -29,5 +29,36 @@ class ViewController: UIViewController {
         // デバック
         print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
     }
+    
+    @IBAction func facebookSignIn(_ sender: Any) {
+        let loginManager = LoginManager()
+        loginManager.logIn([.publicProfile, .email], viewController: self, completion: {
+            result in
+            switch result {
+            case let .success( permission, declinePemisson, token):
+                print("token:\(token),\(permission),\(declinePemisson)")
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: token.authenticationToken)
+                self.signIn(credential: credential)
+            case let .failed(error):
+                print("error:\(error)")
+            case .cancelled:
+                print("cancelled")
+            }
+            
+        })
+    }
+    
+    func signIn(credential:FIRAuthCredential){
+        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+            if let error = error {
+                print("error:\(error)")
+                return
+            } else {
+                self.performSegue(withIdentifier: "SignedInSegue", sender: nil)
+            }
+            return
+        }
+    }
+    
 }
 

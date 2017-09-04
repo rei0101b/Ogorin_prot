@@ -28,6 +28,9 @@
                                 <rect key="frame" x="15" y="541" width="347" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="btn_facebook_login"/>
+                                <connections>
+                                    <action selector="facebookSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQf-qG-geM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EV7-7I-xpY">
                                 <rect key="frame" x="78" y="605" width="220" height="30"/>
