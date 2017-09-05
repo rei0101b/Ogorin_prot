@@ -654,7 +654,7 @@
         <!--プロフィール-->
         <scene sceneID="c7W-eI-q8F">
             <objects>
-                <viewController id="pNP-vb-CFG" sceneMemberID="viewController">
+                <viewController id="pNP-vb-CFG" customClass="ProfileViewController" customModule="Ogorin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="b6G-s2-MBC"/>
                         <viewControllerLayoutGuide type="bottom" id="zZY-J8-KI7"/>
@@ -674,6 +674,12 @@
                                     <navigationItem title="プロフィール" id="Prv-ic-CbC">
                                         <barButtonItem key="leftBarButtonItem" image="icon_plus" style="plain" id="ErM-sh-8Ms">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="ログアウト" id="Uf8-9C-fnm">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="logout:" destination="pNP-vb-CFG" id="0v3-s4-1lX"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -698,6 +704,7 @@
                 <tabBarController storyboardIdentifier="mainPage" automaticallyAdjustsScrollViewInsets="NO" id="GwH-lU-2wf" customClass="TabBarController" customModule="Ogorin" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VdQ-Ma-aRC">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
