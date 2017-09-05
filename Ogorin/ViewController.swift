@@ -43,13 +43,13 @@ class ViewController: UIViewController {
         let nextView = storyboard.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
         self.present(nextView, animated: true, completion: nil)
     }
-    
-    @IBAction func changeView(_ sender: Any) {
-        loginView.image = UIImage(named: "login_view" + "\((sender as AnyObject).currentPage)" + ".png")
-        // デバック
-        print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
-    }
-    
+//    
+//    @IBAction func changeView(_ sender: Any) {
+//        loginView.image = UIImage(named: "login_view" + "\((sender as AnyObject).currentPage)" + ".png")
+//        // デバック
+//        print("login_view" + "\((sender as AnyObject).currentPage!)" + ".png")
+//    }
+//    
     
     @IBAction func handleLogoutButton(_ sender: Any) {
         // ログアウトする

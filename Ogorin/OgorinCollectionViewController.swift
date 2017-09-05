@@ -9,12 +9,24 @@
 import UIKit
 
 class OgorinCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout  {
+    @IBOutlet var h1: UIImageView!
     
+    @IBOutlet var h2: UIImageView!
+    
+    @IBOutlet var h3: UIImageView!
+    
+    @IBOutlet var h4: UIImageView!
+    
+    @IBOutlet var h5: UIImageView!
+    
+    @IBOutlet var h6: UIImageView!
+    
+    @IBOutlet var navigationBar: UINavigationBar!
     let photos = ["board1","board2","board3","board4","board5","board6"]
+    var flag = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -61,16 +73,27 @@ class OgorinCollectionViewController: UIViewController, UICollectionViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    @IBAction func switchOgorinShop(_ sender: Any) {
+        if flag == 0 {
+            h1.isHidden = true
+            h2.isHidden = true
+            h3.isHidden = true
+            h4.isHidden = true
+            h5.isHidden = true
+            h6.isHidden = true
+            flag = 1
+        }
+        h1.isHidden = false
+        h2.isHidden = false
+        h3.isHidden = false
+        h4.isHidden = false
+        h5.isHidden = false
+        h6.isHidden = false
+        flag = 0
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+//    遷移
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {}
+   
 }

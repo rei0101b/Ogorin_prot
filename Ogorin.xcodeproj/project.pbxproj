@@ -15,6 +15,14 @@
 		B10F07E81F5A8CBF00800691 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10F07E61F5A8CBF00800691 /* LaunchScreen.storyboard */; };
 		B12123231F5DFC8600F1CD44 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123221F5DFC8600F1CD44 /* TabBarController.swift */; };
 		B12123251F5E4E4D00F1CD44 /* OgorinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123241F5E4E4D00F1CD44 /* OgorinCollectionViewController.swift */; };
+		B12123271F5E68C600F1CD44 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123261F5E68C600F1CD44 /* TalkViewController.swift */; };
+		B12123291F5E6FD900F1CD44 /* PostLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123281F5E6FD900F1CD44 /* PostLikeViewController.swift */; };
+		B121232B1F5E712B00F1CD44 /* TalkPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121232A1F5E712B00F1CD44 /* TalkPersonViewController.swift */; };
+		B121232D1F5E72B400F1CD44 /* PostShokuRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121232C1F5E72B400F1CD44 /* PostShokuRepoViewController.swift */; };
+		B121232F1F5E767600F1CD44 /* ShopDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B121232E1F5E767600F1CD44 /* ShopDetailInfoViewController.swift */; };
+		B12123311F5E769000F1CD44 /* ShopOgorinPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123301F5E769000F1CD44 /* ShopOgorinPostViewController.swift */; };
+		B12123331F5E78C800F1CD44 /* AppointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123321F5E78C800F1CD44 /* AppointViewController.swift */; };
+		B12123351F5E7C4C00F1CD44 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12123341F5E7C4C00F1CD44 /* ShopViewController.swift */; };
 		B194788F1F5D283C00677501 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B194788E1F5D283C00677501 /* GoogleService-Info.plist */; };
 		B19478911F5D4FB200677501 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19478901F5D4FB200677501 /* loginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +41,14 @@
 		B12123211F5D71AB00F1CD44 /* Ogorin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ogorin.entitlements; sourceTree = "<group>"; };
 		B12123221F5DFC8600F1CD44 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../TabBarController.swift; sourceTree = "<group>"; };
 		B12123241F5E4E4D00F1CD44 /* OgorinCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OgorinCollectionViewController.swift; sourceTree = "<group>"; };
+		B12123261F5E68C600F1CD44 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
+		B12123281F5E6FD900F1CD44 /* PostLikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostLikeViewController.swift; sourceTree = "<group>"; };
+		B121232A1F5E712B00F1CD44 /* TalkPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkPersonViewController.swift; sourceTree = "<group>"; };
+		B121232C1F5E72B400F1CD44 /* PostShokuRepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostShokuRepoViewController.swift; sourceTree = "<group>"; };
+		B121232E1F5E767600F1CD44 /* ShopDetailInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailInfoViewController.swift; sourceTree = "<group>"; };
+		B12123301F5E769000F1CD44 /* ShopOgorinPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopOgorinPostViewController.swift; sourceTree = "<group>"; };
+		B12123321F5E78C800F1CD44 /* AppointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointViewController.swift; sourceTree = "<group>"; };
+		B12123341F5E7C4C00F1CD44 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		B194788E1F5D283C00677501 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B19478901F5D4FB200677501 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +114,14 @@
 				B10F07E61F5A8CBF00800691 /* LaunchScreen.storyboard */,
 				B10F07E91F5A8CBF00800691 /* Info.plist */,
 				B194788E1F5D283C00677501 /* GoogleService-Info.plist */,
+				B12123261F5E68C600F1CD44 /* TalkViewController.swift */,
+				B12123281F5E6FD900F1CD44 /* PostLikeViewController.swift */,
+				B121232A1F5E712B00F1CD44 /* TalkPersonViewController.swift */,
+				B121232C1F5E72B400F1CD44 /* PostShokuRepoViewController.swift */,
+				B121232E1F5E767600F1CD44 /* ShopDetailInfoViewController.swift */,
+				B12123301F5E769000F1CD44 /* ShopOgorinPostViewController.swift */,
+				B12123321F5E78C800F1CD44 /* AppointViewController.swift */,
+				B12123341F5E7C4C00F1CD44 /* ShopViewController.swift */,
 			);
 			path = Ogorin;
 			sourceTree = "<group>";
@@ -233,9 +257,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10F07E01F5A8CBF00800691 /* ViewController.swift in Sources */,
+				B121232F1F5E767600F1CD44 /* ShopDetailInfoViewController.swift in Sources */,
 				B12123231F5DFC8600F1CD44 /* TabBarController.swift in Sources */,
 				B10F07DE1F5A8CBF00800691 /* AppDelegate.swift in Sources */,
+				B12123351F5E7C4C00F1CD44 /* ShopViewController.swift in Sources */,
+				B12123331F5E78C800F1CD44 /* AppointViewController.swift in Sources */,
+				B121232B1F5E712B00F1CD44 /* TalkPersonViewController.swift in Sources */,
 				B12123251F5E4E4D00F1CD44 /* OgorinCollectionViewController.swift in Sources */,
+				B12123311F5E769000F1CD44 /* ShopOgorinPostViewController.swift in Sources */,
+				B12123271F5E68C600F1CD44 /* TalkViewController.swift in Sources */,
+				B12123291F5E6FD900F1CD44 /* PostLikeViewController.swift in Sources */,
+				B121232D1F5E72B400F1CD44 /* PostShokuRepoViewController.swift in Sources */,
 				B19478911F5D4FB200677501 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
