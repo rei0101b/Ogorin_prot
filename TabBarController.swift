@@ -14,6 +14,14 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let font:UIFont! = UIFont(name:"HelveticaNeue-Bold",size:10)
+        let selectedAttributes:NSDictionary! = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor(red:0.31, green:0.89, blue:0.76, alpha:1.0)]
+        
+        UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes as? [String : Any], for: UIControlState.selected)
+        
+        UITabBar.appearance().tintColor = UIColor(red:0.31, green:0.89, blue:0.76, alpha:1.0)
+
 
         // Do any additional setup after loading the view.
     }
@@ -29,8 +37,7 @@ class TabBarController: UITabBarController {
             }
         }
     }
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
